@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'pwd'
+                sh 'whoami'
+              
                 sh 'echo $WORKSPACE'
                 sh 'sudo docker build -f ${WORKSPACE}/Dockerfile -t  my-docker-image  .'
             }
