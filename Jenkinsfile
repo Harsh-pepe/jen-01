@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t my-docker-image -f /var/lib/jenkins/workspace/jen-001/Dockerfile .'
+                sh 'docker build -t my-docker-image -f /home/jenkins/Dockerfile .'
             }
         }
         
