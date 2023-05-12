@@ -12,7 +12,7 @@ jen-01.git']]])
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t my-docker-image -f /home/jenkins/Dockerfile .'
+                sh 'docker build -t my-docker-image  .'
             }
         }
         
