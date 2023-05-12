@@ -9,7 +9,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'pwd'
-                sh 'docker build -t my-docker-image  .'
+                sh 'echo $WORKSPACE
+                sh 'docker build -t -f ${WORKSPACE}/Dockerfile my-docker-image  .'
             }
         }
         
