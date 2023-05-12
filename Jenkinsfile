@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'echo $WORKSPACE'
-                sh 'docker build -f ${WORKSPACE}/Dockerfile -t  my-docker-image  .'
+                sh 'sudo docker build -f ${WORKSPACE}/Dockerfile -t  my-docker-image  .'
             }
         }
         
