@@ -16,11 +16,11 @@ pipeline {
         
         stage('Push') {
             steps {
-                withCredentials([string(credentialsId: 'docker-registry-cred-id', variable: 'DOCKER_REGISTRY_CRED')]) {
-                    sh 'docker login -u "$DOCKER_REGISTRY_USERNAME" -p "$DOCKER_REGISTRY_PASSWORD" my-docker-registry.com'
-                    sh 'docker tag my-docker-image my-docker-registry.com/my-docker-image'
-                    sh 'docker push my-docker-registry.com/my-docker-image'
-                }
+                
+                    sh 'docker login -u "harshr69" -p "Harshhclmi5" hub.docker.com'
+                    sh 'docker tag my-docker-image hub.docker.com/my-docker-image'
+                    sh 'docker push hub.docker.com/my-docker-image'
+                
             }
         }
         
