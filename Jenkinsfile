@@ -5,9 +5,6 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Harsh-pepe/jen-01.git']]])
             }
-        }
-    
-    stages {
         stage('Build') {
             steps {
                 sh 'docker build -t my-docker-image  .'
@@ -39,5 +36,4 @@ pipeline {
             }
         }
     }
-}
 }
